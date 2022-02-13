@@ -1,6 +1,7 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'For myself in two weeks'
+theme = "hugo-book"
 
 [taxonomies]
     tag = "tags"
