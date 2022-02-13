@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>For myself in two weeks</title>
+    <link>http://example.org/docs/hugo%E9%96%A2%E9%80%A3/</link>
+    <description>Recent content on For myself in two weeks</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="http://example.org/docs/hugo%E9%96%A2%E9%80%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugoの設定</title>
+      <link>http://example.org/docs/hugo%E9%96%A2%E9%80%A3/hugo%E3%81%AE%E8%A8%AD%E5%AE%9A/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://example.org/docs/hugo%E9%96%A2%E9%80%A3/hugo%E3%81%AE%E8%A8%AD%E5%AE%9A/</guid>
+      <description>設定 KaTexなどのマークアップを有効にする。
+[markup.goldmark.renderer] unsafe = true  新しいページの作成 テスト記事です。 記事はmarkdown形式で記述します。
+ foo bar hoge  </description>
+    </item>
+    
+  </channel>
+</rss>
