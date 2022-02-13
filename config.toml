@@ -2,6 +2,8 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'For myself in two weeks'
 theme = "hugo-book"
+# 公開するページのURL
+baseURL = "https://dncknc.github.io/"
 
 [taxonomies]
     tag = "tags"
