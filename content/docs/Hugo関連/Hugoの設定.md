@@ -4,6 +4,8 @@ weight: 1
 ---
 
 # 設定
+
+
 ## 基本設定
 ### KaTexなどのマークアップを有効にする
 
@@ -11,9 +13,14 @@ weight: 1
       unsafe = true
 
 ## GitHub Actions を使って GitHub Pages に公開する設定
+### キーの作成
+deploy key(秘密鍵) と secret(公開鍵)を登録する。
+
+https://www.morling.dev/blog/automatically-deploying-hugo-website-via-github-actions/
+
 
 ### 空の .nojekyll を作成する
-git push してgithub側で build される際、次のエラーが出るので空の .nojekyll を作成しておく。
+git push してgithub側で build される際、「Deploy to GitHub Pages」の段階で次のエラーが出るため、空の .nojekyll を作成しておく。
 
 ```
 Error: Error: No uploaded artifact was found! Please check if there are any errors at build step.
