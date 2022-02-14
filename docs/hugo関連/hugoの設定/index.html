@@ -2,14 +2,16 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="設定 #  基本設定 #  KaTexなどのマークアップを有効にする #  [markup.goldmark.renderer] unsafe = true  GitHub Actions を使って GitHub Pages に公開する設定 #  キーの作成 #  deploy key(秘密鍵) と secret(公開鍵)を登録する。
+<meta name=description content="設定 #  基本設定 #  KaTexなどのマークアップを有効にする #  [markup.goldmark.renderer] unsafe = true  GitHub Actions を使って GitHub Pages に公開する設定 #  2022-02-14
+キーの作成 #  deploy key(秘密鍵) と secret(公開鍵)を登録する。
 https://www.morling.dev/blog/automatically-deploying-hugo-website-via-github-actions/
 空の .nojekyll を作成する #  git push してgithub側で build される際、「Deploy to GitHub Pages」の段階で次のエラーが出るため、空の .nojekyll を作成しておく。
 Error: Error: No uploaded artifact was found! Please check if there are any errors at build step. touch .nojekyll  https://stackoverflow.com/questions/70830152/page-on-github-wont-publish-error-404-not-found
 gh-pages-deployment.yml #  ここを参考にGitHub Actionの設定ファイル gh-pages-deployment.">
 <meta name=theme-color content="#FFFFFF">
 <meta name=color-scheme content="light dark"><meta property="og:title" content="Hugoの設定">
-<meta property="og:description" content="設定 #  基本設定 #  KaTexなどのマークアップを有効にする #  [markup.goldmark.renderer] unsafe = true  GitHub Actions を使って GitHub Pages に公開する設定 #  キーの作成 #  deploy key(秘密鍵) と secret(公開鍵)を登録する。
+<meta property="og:description" content="設定 #  基本設定 #  KaTexなどのマークアップを有効にする #  [markup.goldmark.renderer] unsafe = true  GitHub Actions を使って GitHub Pages に公開する設定 #  2022-02-14
+キーの作成 #  deploy key(秘密鍵) と secret(公開鍵)を登録する。
 https://www.morling.dev/blog/automatically-deploying-hugo-website-via-github-actions/
 空の .nojekyll を作成する #  git push してgithub側で build される際、「Deploy to GitHub Pages」の段階で次のエラーが出るため、空の .nojekyll を作成しておく。
 Error: Error: No uploaded artifact was found! Please check if there are any errors at build step. touch .nojekyll  https://stackoverflow.com/questions/70830152/page-on-github-wont-publish-error-404-not-found
@@ -21,7 +23,8 @@ gh-pages-deployment.yml #  ここを参考にGitHub Actionの設定ファイル 
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.4c5bfa7cd858dd3cc0f7950775ade26c0e1e988190aed8e375b9305142775666.js integrity="sha256-TFv6fNhY3TzA95UHda3ibA4emIGQrtjjdbkwUUJ3VmY=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.8edffdc5f6e4ecf78001b2b1a5bbdaec47b13e971baf57336d6a506afb94aede.js integrity="sha256-jt/9xfbk7PeAAbKxpbva7EexPpcbr1czbWpQavuUrt4=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(a,e,f,g,b,c,d){a.GoogleAnalyticsObject=b,a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)},a[b].l=1*new Date,c=e.createElement(f),d=e.getElementsByTagName(f)[0],c.async=1,c.src=g,d.parentNode.insertBefore(c,d)}(window,document,'script','https://www.google-analytics.com/analytics.js','ga'),ga('create','UA-220217008-1','auto'),ga('send','pageview'))</script>
 </head>
 <body dir=ltr>
 <input type=checkbox class="hidden toggle" id=menu-control>
@@ -119,6 +122,7 @@ KaTexなどのマークアップを有効にする
 GitHub Actions を使って GitHub Pages に公開する設定
 <a class=anchor href=#github-actions-%e3%82%92%e4%bd%bf%e3%81%a3%e3%81%a6-github-pages-%e3%81%ab%e5%85%ac%e9%96%8b%e3%81%99%e3%82%8b%e8%a8%ad%e5%ae%9a>#</a>
 </h2>
+<p>2022-02-14</p>
 <h3 id=キーの作成>
 キーの作成
 <a class=anchor href=#%e3%82%ad%e3%83%bc%e3%81%ae%e4%bd%9c%e6%88%90>#</a>
