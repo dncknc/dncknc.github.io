@@ -4,6 +4,8 @@ title = 'For myself in two weeks'
 theme = "hugo-book"
 # 公開するページのURL
 
+googleAnalytics = "UA-220217008-1"
+
 [taxonomies]
     tag = "tags"
     category = "categories"

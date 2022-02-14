@@ -13,6 +13,8 @@ weight: 1
       unsafe = true
 
 ## GitHub Actions を使って GitHub Pages に公開する設定
+2022-02-14
+
 ### キーの作成
 deploy key(秘密鍵) と secret(公開鍵)を登録する。
 
