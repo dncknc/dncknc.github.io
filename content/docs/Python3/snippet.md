@@ -31,7 +31,7 @@ pprint.pprint(json_dict, width=40)
 print(type(json_dict))
 
 # dict を for ループ
-for key, value in d.items():
+for key, value in dict_test.items():
     print(key, value)
 {{< / highlight >}}
 
