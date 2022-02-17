@@ -2,22 +2,18 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="基本操作 #  index を設定する。
-drop=False で既存のインデックスを退避する。 #  df = df.set_index(['timestamp'], drop=False) index の番号を振りなおす。
-# 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # drop=True で既存のインデックスを退避せず上書きする df = df.reset_index(drop=True) df.index.name= 'index' ">
+<meta name=description content>
 <meta name=theme-color content="#FFFFFF">
 <meta name=color-scheme content="light dark"><meta property="og:title" content="基本操作">
-<meta property="og:description" content="基本操作 #  index を設定する。
-drop=False で既存のインデックスを退避する。 #  df = df.set_index(['timestamp'], drop=False) index の番号を振りなおす。
-# 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # drop=True で既存のインデックスを退避せず上書きする df = df.reset_index(drop=True) df.index.name= 'index' ">
+<meta property="og:description" content>
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://dncknc.github.io/docs/pandas/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"><meta property="article:section" content="docs">
+<meta property="og:url" content="https://dncknc.github.io/docs/data-science/pandas/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"><meta property="article:section" content="docs">
 <title>基本操作 | For myself in two weeks</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.e2852fcf19b2d1ab7fb3388805509d7e70a33ee711516eea4e201c54b8981e21.js integrity="sha256-4oUvzxmy0at/sziIBVCdfnCjPucRUW7qTiAcVLiYHiE=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.b36f2694a3b1726719b2729ede71fbce17358650306e00a075b7d8dff04aa12c.js integrity="sha256-s28mlKOxcmcZsnKe3nH7zhc1hlAwbgCgdbfY3/BKoSw=" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5P1KWTV4T"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Q5P1KWTV4T',{anonymize_ip:!1})}</script>
 </head>
@@ -50,7 +46,7 @@ drop=False で既存のインデックスを退避する。 #  df = df.set_index
 <a href=https://dncknc.github.io/docs/data-science/>Data Science</a>
 <ul>
 <li>
-<a href=https://dncknc.github.io/docs/data-science/pandas/snippet/>snippet</a>
+<a href=https://dncknc.github.io/docs/data-science/pandas/snippet/>pandas</a>
 </li>
 <li>
 <a href=https://dncknc.github.io/docs/data-science/pip/>pip</a>
@@ -62,14 +58,6 @@ drop=False で既存のインデックスを退避する。 #  df = df.set_index
 <ul>
 <li>
 <a href=https://dncknc.github.io/docs/hugo%E9%96%A2%E9%80%A3/hugo%E3%81%AE%E8%A8%AD%E5%AE%9A/>Hugoの設定</a>
-</li>
-</ul>
-</li>
-<li>
-<a href=https://dncknc.github.io/docs/pandas/>Pandas</a>
-<ul>
-<li>
-<a href=https://dncknc.github.io/docs/pandas/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/ class=active>基本操作</a>
 </li>
 </ul>
 </li>
@@ -103,31 +91,12 @@ Blog
 <nav id=TableOfContents></nav>
 </aside>
 </header>
-<article class=markdown><h1 id=基本操作>
-基本操作
-<a class=anchor href=#%e5%9f%ba%e6%9c%ac%e6%93%8d%e4%bd%9c>#</a>
-</h1>
-<p>index を設定する。</p>
-<h1 id=dropfalse-で既存のインデックスを退避する>
-drop=False で既存のインデックスを退避する。
-<a class=anchor href=#dropfalse-%e3%81%a7%e6%97%a2%e5%ad%98%e3%81%ae%e3%82%a4%e3%83%b3%e3%83%87%e3%83%83%e3%82%af%e3%82%b9%e3%82%92%e9%80%80%e9%81%bf%e3%81%99%e3%82%8b>#</a>
-</h1>
-<pre tabindex=0><code>df = df.set_index(['timestamp'], drop=False)
-</code></pre><p>index の番号を振りなおす。</p>
-<pre tabindex=0><code># 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する
-df = df.reset_index()
-df.index.name = 'index'
-</code></pre><pre tabindex=0><code># drop=True で既存のインデックスを退避せず上書きする
-df = df.reset_index(drop=True) 
-df.index.name= 'index'
-</code></pre></article>
+<article class=markdown></article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
 </div>
 <script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
 </footer>
-<div class=book-comments>
-</div>
 <label for=menu-control class="hidden book-menu-overlay"></label>
 </div>
 <aside class=book-toc>

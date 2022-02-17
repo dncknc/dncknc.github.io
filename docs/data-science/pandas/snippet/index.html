@@ -2,18 +2,18 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="snippet #  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') ">
+<meta name=description content="snippet #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') # 基本操作 ## index を設定する。 ## drop=False で既存のインデックスを退避する。 df = df.set_index(['timestamp'], drop=False) ## index の番号を振りなおす。 ## 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # drop=True で既存のインデックスを退避せず上書きする df = df.reset_index(drop=True) df.index.name= 'index' # 統計量を表示する df.describe()   ">
 <meta name=theme-color content="#FFFFFF">
-<meta name=color-scheme content="light dark"><meta property="og:title" content="snippet">
-<meta property="og:description" content="snippet #  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') ">
+<meta name=color-scheme content="light dark"><meta property="og:title" content="pandas">
+<meta property="og:description" content="snippet #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') # 基本操作 ## index を設定する。 ## drop=False で既存のインデックスを退避する。 df = df.set_index(['timestamp'], drop=False) ## index の番号を振りなおす。 ## 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # drop=True で既存のインデックスを退避せず上書きする df = df.reset_index(drop=True) df.index.name= 'index' # 統計量を表示する df.describe()   ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://dncknc.github.io/docs/data-science/pandas/snippet/"><meta property="article:section" content="docs">
-<title>snippet | For myself in two weeks</title>
+<title>pandas | For myself in two weeks</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.e2852fcf19b2d1ab7fb3388805509d7e70a33ee711516eea4e201c54b8981e21.js integrity="sha256-4oUvzxmy0at/sziIBVCdfnCjPucRUW7qTiAcVLiYHiE=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.b36f2694a3b1726719b2729ede71fbce17358650306e00a075b7d8dff04aa12c.js integrity="sha256-s28mlKOxcmcZsnKe3nH7zhc1hlAwbgCgdbfY3/BKoSw=" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5P1KWTV4T"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Q5P1KWTV4T',{anonymize_ip:!1})}</script>
 </head>
@@ -46,7 +46,7 @@
 <a href=https://dncknc.github.io/docs/data-science/>Data Science</a>
 <ul>
 <li>
-<a href=https://dncknc.github.io/docs/data-science/pandas/snippet/ class=active>snippet</a>
+<a href=https://dncknc.github.io/docs/data-science/pandas/snippet/ class=active>pandas</a>
 </li>
 <li>
 <a href=https://dncknc.github.io/docs/data-science/pip/>pip</a>
@@ -58,14 +58,6 @@
 <ul>
 <li>
 <a href=https://dncknc.github.io/docs/hugo%E9%96%A2%E9%80%A3/hugo%E3%81%AE%E8%A8%AD%E5%AE%9A/>Hugoの設定</a>
-</li>
-</ul>
-</li>
-<li>
-<a href=https://dncknc.github.io/docs/pandas/>Pandas</a>
-<ul>
-<li>
-<a href=https://dncknc.github.io/docs/pandas/%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/>基本操作</a>
 </li>
 </ul>
 </li>
@@ -90,7 +82,7 @@ Blog
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>snippet</strong>
+<strong>pandas</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
@@ -103,11 +95,55 @@ Blog
 snippet
 <a class=anchor href=#snippet>#</a>
 </h1>
-<pre tabindex=0><code>import pandas as pd
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">11
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">12
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">13
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">14
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#f92672>import</span> <span style=color:#a6e22e>pandas</span> <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>pd</span>
+<span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>to_pickle</span>(<span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>df_data</span>.<span style=color:#a6e22e>pkl</span><span style=color:#960050;background-color:#1e0010>&#39;</span>)
+<span style=color:#a6e22e>pd</span>.<span style=color:#a6e22e>read_pickle</span>(<span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>df_data</span>.<span style=color:#a6e22e>pkl</span><span style=color:#960050;background-color:#1e0010>&#39;</span>)
 
-df.to_pickle('df_data.pkl')
-pd.read_pickle('df_data.pkl')
-</code></pre></article>
+<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>基本操作</span>
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>を設定する</span><span style=color:#960050;background-color:#1e0010>。</span>
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>False</span> <span style=color:#a6e22e>で既存のインデックスを退避する</span><span style=color:#960050;background-color:#1e0010>。</span>
+
+<span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>set_index</span>([<span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>timestamp</span><span style=color:#960050;background-color:#1e0010>&#39;</span>], <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>False</span>)
+
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>の番号を振りなおす</span><span style=color:#960050;background-color:#1e0010>。</span>
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>既存のインデックスを連番に変更し</span><span style=color:#960050;background-color:#1e0010>、</span><span style=color:#a6e22e>既存のインデックスはカラムに退避する</span>
+<span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>reset_index</span>()
+<span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>name</span> = <span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>index</span><span style=color:#960050;background-color:#1e0010>&#39;</span>
+
+<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>True</span> <span style=color:#a6e22e>で既存のインデックスを退避せず上書きする</span>
+<span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>reset_index</span>(<span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>True</span>) 
+<span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>name</span>= <span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>index</span><span style=color:#960050;background-color:#1e0010>&#39;</span>
+
+<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>統計量を表示する</span>
+<span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>describe</span>()</code></pre></td></tr></table>
+</div>
+</div>
+</article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
 </div>
