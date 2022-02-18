@@ -3,6 +3,8 @@ title: snippet
 weight: 1
 ---
 
+## ファイル関連
+### 基本
 {{< highlight go "linenos=true" >}}
 # ファイルの存在確認
 import os
@@ -22,7 +24,10 @@ with open(path, mode='w') as f:
 import shutil
 shutil.copy('./old.txt', './sample/new.txt')
 
-######################################
+{{< / highlight >}}
+
+### Json
+{{< highlight go "linenos=true" >}}
 # json.load() で読み込む場合
 
 with open('./settings.json') as f:
@@ -35,7 +40,7 @@ for key, value in dict_test.items():
     print(key, value)
 {{< / highlight >}}
 
-# ファイルパス、ファイル名関連
+### ファイルパス、ファイル名関連
 {{< highlight go "linenos=true" >}}
 # ファイルパスからファイル名を取得
 basename = os.path.basename(path)
@@ -60,7 +65,7 @@ save_path = new_dir + '/' + new_file_name
 {{< / highlight >}}
 
 
-# テストの書き方
+## テストの書き方
 {{< highlight go "linenos=true" >}}
 def add(x, y):
     """
@@ -77,6 +82,12 @@ import doctest
 doctest.testmod()
 
 {{< / highlight >}}
+
+
+{{< highlight go "linenos=true" >}}
+dir(response.request)
+{{< / highlight >}}
+
 
 
 {{< highlight go "linenos=true" >}}
