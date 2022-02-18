@@ -2,10 +2,10 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="snippet #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') # 基本操作 ## index を設定する。 ## drop=False で既存のインデックスを退避する。 df = df.set_index(['timestamp'], drop=False) ## index の番号を振りなおす。 ## 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # drop=True で既存のインデックスを退避せず上書きする df = df.reset_index(drop=True) df.index.name= 'index' # 統計量を表示する df.describe()   ">
+<meta name=description content="snippet #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') # 基本操作 ## 既存のカラムを index に設定する。 ## drop=False で既存のインデックスがカラムに退避される。 df = df.set_index(['timestamp'], drop=False) ## index の番号を振りなおす。dropna()した時などに使う。 # drop=True で既存のインデックスを退避せず上書きする(デフォルトでFalse?) df = df.reset_index(drop=True) df.index.name= 'index' ## 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # 統計量を表示する df.describe()   ">
 <meta name=theme-color content="#FFFFFF">
 <meta name=color-scheme content="light dark"><meta property="og:title" content="pandas">
-<meta property="og:description" content="snippet #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') # 基本操作 ## index を設定する。 ## drop=False で既存のインデックスを退避する。 df = df.set_index(['timestamp'], drop=False) ## index の番号を振りなおす。 ## 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # drop=True で既存のインデックスを退避せず上書きする df = df.reset_index(drop=True) df.index.name= 'index' # 統計量を表示する df.describe()   ">
+<meta property="og:description" content="snippet #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  import pandas as pd df.to_pickle('df_data.pkl') pd.read_pickle('df_data.pkl') # 基本操作 ## 既存のカラムを index に設定する。 ## drop=False で既存のインデックスがカラムに退避される。 df = df.set_index(['timestamp'], drop=False) ## index の番号を振りなおす。dropna()した時などに使う。 # drop=True で既存のインデックスを退避せず上書きする(デフォルトでFalse?) df = df.reset_index(drop=True) df.index.name= 'index' ## 既存のインデックスを連番に変更し、既存のインデックスはカラムに退避する df = df.reset_index() df.index.name = 'index' # 統計量を表示する df.describe()   ">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://dncknc.github.io/docs/data-science/pandas/snippet/"><meta property="article:section" content="docs">
 <title>pandas | For myself in two weeks</title>
@@ -13,7 +13,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.215439975150880311baa84c798abee0b7630aa4f91499b0c6ea5e8cc7687579.js integrity="sha256-IVQ5l1FQiAMRuqhMeYq+4LdjCqT5FJmwxupejMdodXk=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.509a5e20ab785ec7f08208a4511a90eda56c200122f8ab5f04a2a95bea484f4a.js integrity="sha256-UJpeIKt4XsfwggikURqQ7aVsIAEi+KtfBKKpW+pIT0o=" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5P1KWTV4T"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Q5P1KWTV4T',{anonymize_ip:!1})}</script>
 </head>
@@ -128,19 +128,19 @@ snippet
 <span style=color:#a6e22e>pd</span>.<span style=color:#a6e22e>read_pickle</span>(<span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>df_data</span>.<span style=color:#a6e22e>pkl</span><span style=color:#960050;background-color:#1e0010>&#39;</span>)
 
 <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>基本操作</span>
-<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>を設定する</span><span style=color:#960050;background-color:#1e0010>。</span>
-<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>False</span> <span style=color:#a6e22e>で既存のインデックスを退避する</span><span style=color:#960050;background-color:#1e0010>。</span>
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>既存のカラムを</span> <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>に設定する</span><span style=color:#960050;background-color:#1e0010>。</span>
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>False</span> <span style=color:#a6e22e>で既存のインデックスがカラムに退避される</span><span style=color:#960050;background-color:#1e0010>。</span>
 
 <span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>set_index</span>([<span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>timestamp</span><span style=color:#960050;background-color:#1e0010>&#39;</span>], <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>False</span>)
 
-<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>の番号を振りなおす</span><span style=color:#960050;background-color:#1e0010>。</span>
+<span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>index</span> <span style=color:#a6e22e>の番号を振りなおす</span><span style=color:#960050;background-color:#1e0010>。</span><span style=color:#a6e22e>dropna</span>()<span style=color:#a6e22e>した時などに使う</span><span style=color:#960050;background-color:#1e0010>。</span>
+<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>True</span> <span style=color:#a6e22e>で既存のインデックスを退避せず上書きする</span>(<span style=color:#a6e22e>デフォルトでFalse</span><span style=color:#960050;background-color:#1e0010>?</span>)
+<span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>reset_index</span>(<span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>True</span>) 
+<span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>name</span>= <span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>index</span><span style=color:#960050;background-color:#1e0010>&#39;</span>
+
 <span style=color:#960050;background-color:#1e0010>##</span> <span style=color:#a6e22e>既存のインデックスを連番に変更し</span><span style=color:#960050;background-color:#1e0010>、</span><span style=color:#a6e22e>既存のインデックスはカラムに退避する</span>
 <span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>reset_index</span>()
 <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>name</span> = <span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>index</span><span style=color:#960050;background-color:#1e0010>&#39;</span>
-
-<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>True</span> <span style=color:#a6e22e>で既存のインデックスを退避せず上書きする</span>
-<span style=color:#a6e22e>df</span> = <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>reset_index</span>(<span style=color:#a6e22e>drop</span>=<span style=color:#a6e22e>True</span>) 
-<span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>index</span>.<span style=color:#a6e22e>name</span>= <span style=color:#960050;background-color:#1e0010>&#39;</span><span style=color:#a6e22e>index</span><span style=color:#960050;background-color:#1e0010>&#39;</span>
 
 <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>統計量を表示する</span>
 <span style=color:#a6e22e>df</span>.<span style=color:#a6e22e>describe</span>()</code></pre></td></tr></table>
