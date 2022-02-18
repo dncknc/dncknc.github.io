@@ -2,10 +2,10 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  # ファイルの存在確認 import os if (os.path.isfile(path)): pass # ファイルの読み込み with open('./settings.json') as f: print(f.read()) # ファイルの書込み data = &#34;test&#34; with open(path, mode='w') as f: f.write(data) # ファイルのコピー import shutil shutil.copy('./old.txt', './sample/new.txt') ###################################### # json.load() で読み込む場合 with open('./settings.json') as f: json_dict = json.">
+<meta name=description content="ファイル関連 #  基本 #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # ファイルの存在確認 import os if (os.path.isfile(path)): pass # ファイルの読み込み with open('./settings.json') as f: print(f.read()) # ファイルの書込み data = &#34;test&#34; with open(path, mode='w') as f: f.write(data) # ファイルのコピー import shutil shutil.copy('./old.txt', './sample/new.txt')   Json #  1 2 3 4 5 6 7 8 9 10  # json.">
 <meta name=theme-color content="#FFFFFF">
 <meta name=color-scheme content="light dark"><meta property="og:title" content="snippet">
-<meta property="og:description" content="1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  # ファイルの存在確認 import os if (os.path.isfile(path)): pass # ファイルの読み込み with open('./settings.json') as f: print(f.read()) # ファイルの書込み data = &#34;test&#34; with open(path, mode='w') as f: f.write(data) # ファイルのコピー import shutil shutil.copy('./old.txt', './sample/new.txt') ###################################### # json.load() で読み込む場合 with open('./settings.json') as f: json_dict = json.">
+<meta property="og:description" content="ファイル関連 #  基本 #  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  # ファイルの存在確認 import os if (os.path.isfile(path)): pass # ファイルの読み込み with open('./settings.json') as f: print(f.read()) # ファイルの書込み data = &#34;test&#34; with open(path, mode='w') as f: f.write(data) # ファイルのコピー import shutil shutil.copy('./old.txt', './sample/new.txt')   Json #  1 2 3 4 5 6 7 8 9 10  # json.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://dncknc.github.io/docs/python3/snippet/"><meta property="article:section" content="docs">
 <title>snippet | For myself in two weeks</title>
@@ -13,7 +13,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/en.search.min.b36f2694a3b1726719b2729ede71fbce17358650306e00a075b7d8dff04aa12c.js integrity="sha256-s28mlKOxcmcZsnKe3nH7zhc1hlAwbgCgdbfY3/BKoSw=" crossorigin=anonymous></script>
+<script defer src=/en.search.min.49dd4a881e230e592e29287fe5388c7738c393209a1900826b227d1d97c79ed1.js integrity="sha256-Sd1KiB4jDlkuKSh/5TiMdzjDkyCaGQCCayJ9HZfHntE=" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5P1KWTV4T"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Q5P1KWTV4T',{anonymize_ip:!1})}</script>
 </head>
@@ -88,10 +88,29 @@ Blog
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#ファイル関連>ファイル関連</a>
+<ul>
+<li><a href=#基本>基本</a></li>
+<li><a href=#json>Json</a></li>
+<li><a href=#ファイルパスファイル名関連>ファイルパス、ファイル名関連</a></li>
+</ul>
+</li>
+<li><a href=#テストの書き方>テストの書き方</a></li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown><div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<article class=markdown><h2 id=ファイル関連>
+ファイル関連
+<a class=anchor href=#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e9%96%a2%e9%80%a3>#</a>
+</h2>
+<h3 id=基本>
+基本
+<a class=anchor href=#%e5%9f%ba%e6%9c%ac>#</a>
+</h3>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
@@ -110,18 +129,6 @@ Blog
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">15
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">16
 </span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">17
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">18
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">19
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">20
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">21
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">22
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">23
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">24
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">25
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">26
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">27
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">28
-</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">29
 </span></code></pre></td>
 <td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>ファイルの存在確認</span>
@@ -140,10 +147,28 @@ Blog
 
 <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>ファイルのコピー</span>
 <span style=color:#f92672>import</span> <span style=color:#a6e22e>shutil</span>
-<span style=color:#a6e22e>shutil</span>.copy(<span style=color:#960050;background-color:#1e0010>&#39;</span>.<span style=color:#f92672>/</span><span style=color:#a6e22e>old</span>.<span style=color:#a6e22e>txt</span><span style=color:#960050;background-color:#1e0010>&#39;</span>, <span style=color:#960050;background-color:#1e0010>&#39;</span>.<span style=color:#f92672>/</span><span style=color:#a6e22e>sample</span><span style=color:#f92672>/</span><span style=color:#a6e22e>new</span>.<span style=color:#a6e22e>txt</span><span style=color:#960050;background-color:#1e0010>&#39;</span>)
-
-<span style=color:#960050;background-color:#1e0010>######################################</span>
-<span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>json</span>.<span style=color:#a6e22e>load</span>() <span style=color:#a6e22e>で読み込む場合</span>
+<span style=color:#a6e22e>shutil</span>.copy(<span style=color:#960050;background-color:#1e0010>&#39;</span>.<span style=color:#f92672>/</span><span style=color:#a6e22e>old</span>.<span style=color:#a6e22e>txt</span><span style=color:#960050;background-color:#1e0010>&#39;</span>, <span style=color:#960050;background-color:#1e0010>&#39;</span>.<span style=color:#f92672>/</span><span style=color:#a6e22e>sample</span><span style=color:#f92672>/</span><span style=color:#a6e22e>new</span>.<span style=color:#a6e22e>txt</span><span style=color:#960050;background-color:#1e0010>&#39;</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<h3 id=json>
+Json
+<a class=anchor href=#json>#</a>
+</h3>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 2
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 3
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 4
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 5
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 6
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 7
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 8
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 9
+</span><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#a6e22e>json</span>.<span style=color:#a6e22e>load</span>() <span style=color:#a6e22e>で読み込む場合</span>
 
 <span style=color:#a6e22e>with</span> <span style=color:#a6e22e>open</span>(<span style=color:#960050;background-color:#1e0010>&#39;</span>.<span style=color:#f92672>/</span><span style=color:#a6e22e>settings</span>.<span style=color:#a6e22e>json</span><span style=color:#960050;background-color:#1e0010>&#39;</span>) <span style=color:#a6e22e>as</span> <span style=color:#a6e22e>f</span>:
     <span style=color:#a6e22e>json_dict</span> = <span style=color:#a6e22e>json</span>.<span style=color:#a6e22e>load</span>(<span style=color:#a6e22e>f</span>)
@@ -155,10 +180,10 @@ print(<span style=color:#66d9ef>type</span>(<span style=color:#a6e22e>json_dict<
     print(<span style=color:#a6e22e>key</span>, <span style=color:#a6e22e>value</span>)</code></pre></td></tr></table>
 </div>
 </div>
-<h1 id=ファイルパスファイル名関連>
+<h3 id=ファイルパスファイル名関連>
 ファイルパス、ファイル名関連
 <a class=anchor href=#%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e3%83%91%e3%82%b9%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab%e5%90%8d%e9%96%a2%e9%80%a3>#</a>
-</h1>
+</h3>
 <div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
@@ -203,10 +228,10 @@ print(<span style=color:#a6e22e>basename</span>)
 <span style=color:#960050;background-color:#1e0010>#</span> <span style=color:#960050;background-color:#1e0010>&#39;</span>.<span style=color:#f92672>/</span><span style=color:#a6e22e>aaa</span><span style=color:#f92672>/</span><span style=color:#a6e22e>zzz</span><span style=color:#f92672>/</span><span style=color:#a6e22e>ccc_ddd_eee_add_xxx_</span>.<span style=color:#a6e22e>txt</span><span style=color:#960050;background-color:#1e0010>&#39;</span></code></pre></td></tr></table>
 </div>
 </div>
-<h1 id=テストの書き方>
+<h2 id=テストの書き方>
 テストの書き方
 <a class=anchor href=#%e3%83%86%e3%82%b9%e3%83%88%e3%81%ae%e6%9b%b8%e3%81%8d%e6%96%b9>#</a>
-</h1>
+</h2>
 <div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f"> 1
@@ -241,6 +266,14 @@ print(<span style=color:#a6e22e>basename</span>)
 </div>
 <div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
 <table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="margin-right:.4em;padding:0 .4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
+<pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#a6e22e>dir</span>(<span style=color:#a6e22e>response</span>.<span style=color:#a6e22e>request</span>)</code></pre></td></tr></table>
+</div>
+</div>
+<div class=highlight><div style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4>
+<table style=border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block><tr><td style=vertical-align:top;padding:0;margin:0;border:0>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code></code></pre></td>
 <td style=vertical-align:top;padding:0;margin:0;border:0;width:100%>
 <pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go></code></pre></td></tr></table>
@@ -258,7 +291,18 @@ print(<span style=color:#a6e22e>basename</span>)
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#ファイル関連>ファイル関連</a>
+<ul>
+<li><a href=#基本>基本</a></li>
+<li><a href=#json>Json</a></li>
+<li><a href=#ファイルパスファイル名関連>ファイルパス、ファイル名関連</a></li>
+</ul>
+</li>
+<li><a href=#テストの書き方>テストの書き方</a></li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>
