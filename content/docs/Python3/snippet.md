@@ -89,6 +89,19 @@ dir(response.request)
 {{< / highlight >}}
 
 
+# 辞書を結合する方法
+{{< highlight go "linenos=true" >}}
+d1 = {"a": 1}
+d2 = {"b": 2}
+d1.update(d2)
+
+# 以下も同じ機能
+d1 = {"a": 1} 
+d2 = {"b": 2}
+d1 = d1 | d2
+{{< / highlight >}}
+
+
 
 {{< highlight go "linenos=true" >}}
 {{< / highlight >}}
