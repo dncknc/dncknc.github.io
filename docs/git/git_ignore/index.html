@@ -1,0 +1,182 @@
+<!doctype html><html lang=en-us dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content=".gitignore をホワイトリストで運用する設定 #  # -------------------------------------------- # # ホワイトリスト型の .gitignore # 参考: https://ai-inter1.com/python-print/ # -------------------------------------------- # # 各記号の意味 # * : /以外の0文字以上の文字列にマッチ # ? : /以外の1文字にマッチ # [0-9] : /以外の指定した1文字にマッチ # **: 0個以上のファイル or ディレクトリにマッチ # !で始まる行 : !以降のパターン文字列が示すファイル or ディレクトリを無視しない。前の無視指定を上書きする # -------------------------------------------- # # 【1】 全ファイルを無視する設定 # すべてのファイルを無視するが、フォルダは全て追加する # この設定でも git は空フォルダを無視することに注意。 * !*/ # 【2】 任意のファイルやフォルダを追加する設定 # 指定したフォルダの下にあるファイルとフォルダを追加する # 二重のアスタリスクは0個以上のファイルやディレクトリに一致することを示す。 # !/lib/** !/historical_data/** # このファイル(.gitignore)と同階層以下の「??？_a」というフォルダ階層以降を許可 # !**/*_a/** # このファイル(.">
+<meta name=theme-color content="#FFFFFF">
+<meta name=color-scheme content="light dark"><meta property="og:title" content=".gitignore をホワイトリストで運用">
+<meta property="og:description" content=".gitignore をホワイトリストで運用する設定 #  # -------------------------------------------- # # ホワイトリスト型の .gitignore # 参考: https://ai-inter1.com/python-print/ # -------------------------------------------- # # 各記号の意味 # * : /以外の0文字以上の文字列にマッチ # ? : /以外の1文字にマッチ # [0-9] : /以外の指定した1文字にマッチ # **: 0個以上のファイル or ディレクトリにマッチ # !で始まる行 : !以降のパターン文字列が示すファイル or ディレクトリを無視しない。前の無視指定を上書きする # -------------------------------------------- # # 【1】 全ファイルを無視する設定 # すべてのファイルを無視するが、フォルダは全て追加する # この設定でも git は空フォルダを無視することに注意。 * !*/ # 【2】 任意のファイルやフォルダを追加する設定 # 指定したフォルダの下にあるファイルとフォルダを追加する # 二重のアスタリスクは0個以上のファイルやディレクトリに一致することを示す。 # !/lib/** !/historical_data/** # このファイル(.gitignore)と同階層以下の「??？_a」というフォルダ階層以降を許可 # !**/*_a/** # このファイル(.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://dncknc.github.io/docs/git/git_ignore/"><meta property="article:section" content="docs">
+<title>.gitignore をホワイトリストで運用 | For myself in two weeks</title>
+<link rel=manifest href=/manifest.json>
+<link rel=icon href=/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/book.min.ab46de3e725a6415339a37bba23a0067534a37289b063c9f8d011515a63097a8.css integrity="sha256-q0bePnJaZBUzmje7ojoAZ1NKNyibBjyfjQEVFaYwl6g=" crossorigin=anonymous>
+<script defer src=/flexsearch.min.js></script>
+<script defer src=/en.search.min.3e16927a7757c221a8e9721fae311a6e67962d58cd41e1c2710c60319b44241e.js integrity="sha256-PhaSendXwiGo6XIfrjEabmeWLVjNQeHCcQxgMZtEJB4=" crossorigin=anonymous></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q5P1KWTV4T"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-Q5P1KWTV4T',{anonymize_ip:!1})}</script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a class="flex align-center" href=/><span>For myself in two weeks</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<ul>
+<li>
+<a href=https://dncknc.github.io/docs/python3/>Python3</a>
+<ul>
+<li>
+<a href=https://dncknc.github.io/docs/python3/request/>request</a>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/python3/snippet/>snippet</a>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/python3/%E6%99%82%E5%88%BB%E9%96%A2%E9%80%A3/>時刻関連</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/data-science/>Data Science</a>
+<ul>
+<li>
+<a href=https://dncknc.github.io/docs/data-science/pandas/snippet/>pandas</a>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/data-science/pip/>pip</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/git/>Git</a>
+<ul>
+<li>
+<a href=https://dncknc.github.io/docs/git/git_ignore/ class=active>.gitignore をホワイトリストで運用</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/hugo%E9%96%A2%E9%80%A3/>Hugo関連</a>
+<ul>
+<li>
+<a href=https://dncknc.github.io/docs/hugo%E9%96%A2%E9%80%A3/hugo%E3%81%AE%E8%A8%AD%E5%AE%9A/>Hugoの設定</a>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/hugo%E9%96%A2%E9%80%A3/%E3%82%B7%E3%83%B3%E3%82%BF%E3%83%83%E3%82%AF%E3%82%B9%E3%83%8F%E3%82%A4%E3%83%A9%E3%82%A4%E3%83%88/>シンタックスハイライト</a>
+</li>
+</ul>
+</li>
+<li>
+<a href=https://dncknc.github.io/docs/network/%E9%80%9A%E4%BF%A1%E9%80%9F%E5%BA%A6/>通信速度</a>
+</li>
+</ul>
+<ul>
+<li>
+<a href=/posts/>
+Blog
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/svg/menu.svg class=book-icon alt=Menu>
+</label>
+<strong>.gitignore をホワイトリストで運用</strong>
+<label for=toc-control>
+<img src=/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents></nav>
+</aside>
+</header>
+<article class=markdown><h1 id=gitignore-をホワイトリストで運用する設定>
+.gitignore をホワイトリストで運用する設定
+<a class=anchor href=#gitignore-%e3%82%92%e3%83%9b%e3%83%af%e3%82%a4%e3%83%88%e3%83%aa%e3%82%b9%e3%83%88%e3%81%a7%e9%81%8b%e7%94%a8%e3%81%99%e3%82%8b%e8%a8%ad%e5%ae%9a>#</a>
+</h1>
+<pre tabindex=0><code class=language-gitconfig data-lang=gitconfig># -------------------------------------------- #
+# ホワイトリスト型の .gitignore
+# 参考: https://ai-inter1.com/python-print/
+# -------------------------------------------- #
+# 各記号の意味
+# * : /以外の0文字以上の文字列にマッチ
+# ? : /以外の1文字にマッチ
+# [0-9] : /以外の指定した1文字にマッチ
+# **: 0個以上のファイル or ディレクトリにマッチ
+# !で始まる行 : !以降のパターン文字列が示すファイル or ディレクトリを無視しない。前の無視指定を上書きする
+# -------------------------------------------- #
+
+# 【1】 全ファイルを無視する設定
+# すべてのファイルを無視するが、フォルダは全て追加する
+# この設定でも git は空フォルダを無視することに注意。
+*
+!*/
+
+# 【2】 任意のファイルやフォルダを追加する設定
+# 指定したフォルダの下にあるファイルとフォルダを追加する
+# 二重のアスタリスクは0個以上のファイルやディレクトリに一致することを示す。
+# !/lib/**
+!/historical_data/**
+
+# このファイル(.gitignore)と同階層以下の「??？_a」というフォルダ階層以降を許可
+# !**/*_a/**
+
+# このファイル(.gitignore)と同階層のファイルだけ許可
+# .gitignoreにファイル名やフォルダ名を書くと、
+# 階層関係なくマッチする名前のファイルを無視できる。
+# 先頭に「/（スラッシュ）」を付けると、.gitignoreが置かれてあるディレクトリを
+# 基準としてファイルを無視できる。
+
+# !/README.md
+!/.gitignore
+!/*.ipynb
+!/*.md
+
+# ------------------------------------------------
+# 【3】 常に除外するファイルやフォルダを禁止
+# OSが自動で作るファイル
+.DS_Store
+Thumbs.db
+# アプリが自動で作るファイル
+.ipynb_checkpoints/
+
+# その他
+/archive/
+/csv/
+/fonts/</code></pre>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents></nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
