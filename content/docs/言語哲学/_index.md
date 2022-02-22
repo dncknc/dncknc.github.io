@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: true
-weight: 1
+weight: 5
 ---
 
+# 言語哲学
 
-# Data Science
